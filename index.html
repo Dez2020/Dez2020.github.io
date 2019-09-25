@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
+  <title>Home</title>
+  <style>
 
-<h1>Desiree Montemayor</h1>
-<p></p>
+    .navbar{
+      list-style: none;
+      background-color: black;
+      overflow: hidden;
+      padding: 0;
+    }
 
-</body>
+    .navbar a, .dropdown div{
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      padding: 16px;
+      display: inline-block;
+    }
+    .navbar li{
+      float: left;
+    }
+
+    .navbar li:hover{
+      background-color: pink;
+    }
+
+    .dropdown-content{
+      list-style: none;
+      padding: 0;
+      display: none;
+    }
+
+    .dropdown-content li{
+      float:none;
+    }
+
+    .dropdown:hover .dropdown-content{
+      display: block;
+    }
+
+  </style>
+
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><a href="https://www.google.com">Google</a></li>
+      <li><a href="http://awseducate.com">AWS Educate</a></li>
+      <li class = "dropdown">
+        <div>More Links</div>
+        <ul class="dropdown-content">
+          <li><a href="#">Project 1</a></li>
+          <li><a href="#">Project 2</a></li>
+          <li><a href="#">Project 3</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+
+  </body>
 </html>
