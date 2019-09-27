@@ -4,24 +4,24 @@
     background-color: black;
     overflow: hidden;
     padding:0;
-    } 
-    
+    }
+
     .navbar a, .dropdown div{
         text-decoration:none;
-        color: white;
+        color: rgb(0, 128, 111);
         font-size:24px;
         padding:16px;
         display:inline-block;
     }
-     
+
     .navbar li{
         float: left;
      }
-     
+
      .navbar li:hover{
         background-color: blue;
      }
-     
+
      .dropdown-content{
         list-style:none;
         padding:0;
@@ -30,15 +30,15 @@
         z-index: 1;
         background-color: green;
      }
-     
+
      .dropdown-content li{
          float:none;
      }
-     
+
       .dropdown:hover .dropdown-content{
          display: block;
       }
-      
+
       .active{
           background-color: green;
       }
