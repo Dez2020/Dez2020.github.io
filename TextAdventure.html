@@ -15,7 +15,7 @@
       }
 
       #leftpane{
-          width: 56%;
+          width: 50%;
           height: 100%;
           float: left;
           display: flex;
@@ -26,19 +26,83 @@
       }
 
       #rightpane{
-          width: 44%;
+          width: 50%;
           height: 100%;
           float: left;
-          background-color: blue
+          background-color: blue;
+      }
+      #storytext{
+          position: absolute;
+          bottom: 50px;
+          top: 0px;
+          left:50%;
+          right: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: pink;
+
+
       }
 
-   </style>
-   </head>
-   <body>
-    <div id="container">
-        <div id='leftpane'>
-       </div>
+      #choices{
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          left:50%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: yellow;
 
-       
-  </body>
+
+      }
+
+      #b1,#b2,#b3,#b4{
+
+          display: inline-block;
+          background-color: purple;
+          color: white;
+          font-size: 16px;
+          padding: 10px;
+          border-radius: 8px;
+          text-decoration: none;
+          margin: 8px;
+      }
+
+       </style>
+       </head>
+      <body>
+      <ul class = "navbar">
+            <li><a href="/index.html">Home</a><li>
+            <li class = "active"><a href="resume.html">Resume</a><li>
+            <li><a href="contactme.html">contactme</a></li>
+            <li><a href="aboutme.html">aboutme</a></li>
+            <li class= "dropdown">
+               <div>Projects</div>
+               <ul class = "dropdown-content">
+
+                  <li><a href="TextAdventure">TextAdventure</a><li>
+                  <li><a href="project2.html">project 2</a><li>
+                  <li><a href="project3.html">project 3</a></li>
+
+
+               </ul>
+
+
+    <div id="container">
+        <div id="leftpane">
+        </div>
+        <div id="rightpane">
+           <div id="storytext">
+          </div>
+          <div id="choices">
+             <a id="b1" href="#"> choice 1 </a>
+             <a id="b2" href="#"> choice 2 </a>
+             <a id="b3" href="#"> choice 3 </a>
+             <a id="b4" href="#"> choice 4 </a>
+          </div>
+    </div>
+ </body>
 </html>
