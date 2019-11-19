@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <title></title>
 
 <style>
      #container{
          position: absolute;
-         top: 40px;
+         top: 75px;
          bottom: 0px;
          left: 0px;
          right: 0px;
-         background-color: green;
-
+         background-color:black;
       }
 
       #leftpane{
@@ -21,7 +22,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: red;
+         
 
       }
 
@@ -29,7 +30,7 @@
           width: 50%;
           height: 100%;
           float: left;
-          background-color: blue;
+          
       }
       #storytext{
           position: absolute;
@@ -40,8 +41,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: pink;
-
+         
 
       }
 
@@ -54,7 +54,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: yellow;
+          
 
 
       }
@@ -62,7 +62,7 @@
       #b1,#b2,#b3,#b4{
 
           display: inline-block;
-          background-color: purple;
+          background-color: #FA8072;
           color: white;
           font-size: 16px;
           padding: 10px;
@@ -71,38 +71,147 @@
           margin: 8px;
       }
 
+      #storyimg{
+          max-height:80%;
+          max-width:97%;
+          width:97%;
+
+
+      }
+
+
        </style>
        </head>
       <body>
       <ul class = "navbar">
             <li><a href="/index.html">Home</a><li>
-            <li class = "active"><a href="resume.html">Resume</a><li>
+            <li><a href="resume.html">Resume</a><li>
             <li><a href="contactme.html">contactme</a></li>
             <li><a href="aboutme.html">aboutme</a></li>
             <li class= "dropdown">
                <div>Projects</div>
                <ul class = "dropdown-content">
 
-                  <li><a href="TextAdventure">TextAdventure</a><li>
+                  <li class = "active"><a href="TextAdventure">TextAdventure</a><li>
                   <li><a href="project2.html">project 2</a><li>
                   <li><a href="project3.html">project 3</a></li>
 
 
                </ul>
+    </style>
+    </head>
+    <body>
 
 
     <div id="container">
         <div id="leftpane">
+            <img id="storyimg" src="images/witch-movies.JPG">
+            <img id="storyimg" src="images/woods.JPG">
+            
         </div>
         <div id="rightpane">
            <div id="storytext">
+             <p id="ptext1"></p>
+             <p id="ptext2"></p>
+             <p id="ptext3"></p>
+             <p id="ptext4"></p>
           </div>
           <div id="choices">
-             <a id="b1" href="#"> choice 1 </a>
-             <a id="b2" href="#"> choice 2 </a>
-             <a id="b3" href="#"> choice 3 </a>
-             <a id="b4" href="#"> choice 4 </a>
+             <a id="b1" onclick="bclick(1)" href="#"> choice 1 </a>
+             <a id="b2" onclick="bclick(2)"  href="#"> choice 2 </a>
+             <a id="b3" onclick="bclick(3)"  href="#"> choice 3 </a>
+             <a id="b4" onclick="bclick(4)" href="#"> choice 4 </a>
           </div>
     </div>
+ </div>
+
+ <script>
+     var pic = document.getElementById("storyimg");
+     var ptext1 = document.getElementById("ptext1");
+     var ptext2 = document.getElementById("ptext2");
+     var ptext3 = document.getElementById("ptext3");
+     var ptext4 = document.getElementById("ptext4");
+     var b1 = document.getElementById("b1");
+     var b2 = document.getElementById("b2");
+     var b3 = document.getElementById("b3");
+     var b4 = document.getElementById("b4");
+     var state ="intro";
+     intro();
+
+     function intro(){
+         pic.src ="images/witch-movies.JPG";
+         ptext1.innerHTML = "Do you want to meet the witch?";
+         ptext2.innerHTML = "";
+         ptext3.innerHTML = "";
+         ptext4.innerHTML = "";
+         b1.innerHTML = "Yes";
+         b2.innerHTML = "No";
+         b3.innerHTML = "";
+         b1.style.display = "block";
+         b2.style.display = "block";
+         b3.style.display = "none";
+         b4.style.display = "none";
+     }
+    function attackWitch(){
+            pic.src ="images/wooods.JPG";
+            ptext1.innerHTML = "What weapon would you like to use";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Pitch Fork";
+            b2.innerHTML = "Garlic";
+            b3.innerHTML = "Holy Water";
+            b4.innerHTML = "Boulder";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "block";
+        }
+    function meetWitch(){
+            pic.src ="images/witch-movies.JPG";
+            ptext1.innerHTML = "What do you want to do";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Attack";
+            b2.innerHTML = "Run";
+            b3.innerHTML = "Stay";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "none";
+        } 
+
+     //state machine 
+    function bclick(button){
+        if(state == "intro"){
+            if (button == 1){
+                meetWitch();
+                state ="meetWitch";
+            }
+            else if(botton == 2){
+                 //send them somewhere else 
+                 intro();
+                 state = "intro";
+            }
+        }
+        else if(state == "meetWitch"){
+            if (botton == 1){
+               //Attack
+               attackWitch();
+               state = "attackWitch";
+            }
+            else if(botton == 2){
+             //Run 
+            }
+            else if (botton == 3){
+            //stay 
+            }
+            return false;
+        }
+    }
+
+ </script>
  </body>
 </html>
