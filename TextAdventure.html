@@ -190,22 +190,22 @@
                 meetWitch();
                 state ="meetWitch";
             }
-            else if(botton == 2){
+            else if(button == 2){
                  //send them somewhere else 
                  intro();
                  state = "intro";
             }
         }
         else if(state == "meetWitch"){
-            if (botton == 1){
+            if (button== 1){
                //Attack
                attackWitch();
                state = "attackWitch";
             }
-            else if(botton == 2){
+            else if(button == 2){
              //Run 
             }
-            else if (botton == 3){
+            else if (button == 3){
             //stay 
             }
             return false;
