@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+
 <title></title>
 
 <style>
@@ -38,8 +38,8 @@
           top: 0px;
           left:50%;
           right: 0px;
-          display: flex;
-          align-items: center;
+          /*display: flex;
+          align-items: center;*/
           justify-content: center;
          
 
@@ -97,7 +97,7 @@
                   <li><a href="project3.html">project 3</a></li>
 
 
-               </ul>
+    </ul>
     </style>
     </head>
     <body>
@@ -105,8 +105,8 @@
 
     <div id="container">
         <div id="leftpane">
-            <img id="storyimg" src="images/witch-movies.JPG">
-            <img id="storyimg" src="images/woods.JPG">
+            <img id="storyimg" src="">
+            <img id="storyimg" src="">
             
         </div>
         <div id="rightpane">
@@ -126,92 +126,309 @@
  </div>
 
  <script>
-     var pic = document.getElementById("storyimg");
-     var ptext1 = document.getElementById("ptext1");
-     var ptext2 = document.getElementById("ptext2");
-     var ptext3 = document.getElementById("ptext3");
-     var ptext4 = document.getElementById("ptext4");
-     var b1 = document.getElementById("b1");
-     var b2 = document.getElementById("b2");
-     var b3 = document.getElementById("b3");
-     var b4 = document.getElementById("b4");
-     var state ="intro";
-     intro();
+            var pic = document.getElementById("storyimg");
+            var ptext1 = document.getElementById("ptext1");
+            var ptext2 = document.getElementById("ptext2");
+            var ptext3 = document.getElementById("ptext3");
+            var ptext4 = document.getElementById("ptext4");
+            var b1 = document.getElementById("b1");
+            var b2 = document.getElementById("b2");
+            var b3 = document.getElementById("b3");
+            var b4 = document.getElementById("b4");
+            var state = "intro";
 
-     function intro(){
-         pic.src ="images/witch-movies.JPG";
-         ptext1.innerHTML = "Do you want to meet the witch?";
-         ptext2.innerHTML = "";
-         ptext3.innerHTML = "";
-         ptext4.innerHTML = "";
-         b1.innerHTML = "Yes";
-         b2.innerHTML = "No";
-         b3.innerHTML = "";
-         b1.style.display = "block";
-         b2.style.display = "block";
-         b3.style.display = "none";
-         b4.style.display = "none";
-     }
-    function attackWitch(){
-            pic.src ="images/wooods.JPG";
-            ptext1.innerHTML = "What weapon would you like to use";
-            ptext2.innerHTML = "";
-            ptext3.innerHTML = "";
-            ptext4.innerHTML = "";
-            b1.innerHTML = "Pitch Fork";
-            b2.innerHTML = "Garlic";
-            b3.innerHTML = "Holy Water";
-            b4.innerHTML = "Boulder";
-            b1.style.display = "block";
-            b2.style.display = "block";
-            b3.style.display = "block";
-            b4.style.display = "block";
-        }
-    function meetWitch(){
-            pic.src ="images/witch-movies.JPG";
-            ptext1.innerHTML = "What do you want to do";
-            ptext2.innerHTML = "";
-            ptext3.innerHTML = "";
-            ptext4.innerHTML = "";
-            b1.innerHTML = "Attack";
-            b2.innerHTML = "Run";
-            b3.innerHTML = "Stay";
-            b4.innerHTML = "";
-            b1.style.display = "block";
-            b2.style.display = "block";
-            b3.style.display = "block";
-            b4.style.display = "none";
-        } 
+            intro();
 
-     //state machine 
-    function bclick(button){
-        if(state == "intro"){
-            if (button == 1){
-                meetWitch();
-                state ="meetWitch";
+            function intro()
+            {
+                pic.src = "images/woods.jpg";
+                ptext1.innerHTML = "Bob is a singer. Bob is tired of paparazzi always following him around.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Attend a normal school as a singer in disguise.";
+                b2.innerHTML = "Don't attend a normal school as a singer in disguise.";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
             }
-            else if(button == 2){
-                 //send them somewhere else 
-                 intro();
-                 state = "intro";
+            function part7()
+            {
+                pic.src = "images/image (2).png";
+                ptext1.innerHTML = "Bob lives happily ever after.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Back to Start";
+                b2.innerHTML = "";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+                //state = "meetWitch";
             }
-        }
-        else if(state == "meetWitch"){
-            if (button== 1){
-               //Attack
-               attackWitch();
-               state = "attackWitch";
+            function part1()
+            {
+                pic.src = "images/Agitated.gif";
+                ptext1.innerHTML = "Bob finds a girl that likes him but she is a bully so Bob doesn’t like her. However, she is tenacious and always follows Bob around. Her name is Cairo.";
+                ptext2.innerHTML = "Does Bob talk to her?";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Yes";
+                b2.innerHTML = "No";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
             }
-            else if(button == 2){
-             //Run 
+            function part2()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "Bob tells her that he does not like her. ";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Continue";
+                b2.innerHTML = "";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
             }
-            else if (button == 3){
-            //stay 
+            function part6()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "Bob does not talk to her.";
+                ptext2.innerHTML = "The bully follows Bob but Bob keeps ignoring her.";
+                ptext3.innerHTML = "Stay with the bully and be annoyed? ";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Yes";
+                b2.innerHTML = "No";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
             }
-            return false;
-        }
-    }
-
- </script>
+            function part3()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "[3] Then one day this one girl shows up and Bob likes her but she doesn’t know what Bob feels about her. Her name is Jhoana.";
+                ptext2.innerHTML = "Bob is new at school and wants people to like him. Cairo is in a group of popular kids and Bob knows that if he makes friends with her, he could be friends with anyone.  However, Bob does not think he wants to be friends with her.";
+                ptext3.innerHTML = "However, Jhoana is an outcast and after talking to her for awhile Bob realizes that she is poor. If Bob makes friends with her Bob will also have no friends but they will have each other, and Bob can already tell that they will like each other eventually.  ";
+                ptext4.innerHTML = "Which person does Bob attempt to make friends with?";
+                b1.innerHTML = "Cairo";
+                b2.innerHTML = "Jhoana";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function part4()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "[4] Because Bob values happiness over money, Bob chooses to reject Cairo and be friends with Jhoana. Cairo is jealous that Bob choses Jhoana over her so she makes it her mission to make Bob’s life miserable for the rest of the time Bob is at their school. Bob knows he only has one choice: Get rid of her. ";
+                ptext2.innerHTML = "Bob formulates a plan.";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Cairo graffities the school and blames it on Bob. Bob proves his innocence and she gets expelled. ";
+                b2.innerHTML = "Bob finds her in a dark, deserted alley while she is walking home. Bob cuts her hair into a masculine haircut. She is so embarrassed that she drops out of school.";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function part5()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "[5] Bob never sees her again. Bob and Jhoana become the most popular and well-liked students at the school. They get married years later.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Continue";
+                b2.innerHTML = "";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function part6()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "Bob does not talk to her.";
+                ptext2.innerHTML = "The bully follows Bob but Bob keeps ignoring her";
+                ptext3.innerHTML = "Stay with the bully and be annoyed? ";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Yes";
+                b2.innerHTML = "No";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function part10()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "Bob is popular but miserable everyday.";
+                ptext2.innerHTML = "Does Bob stay friends with Cairo or dump her for Jhoana?";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Cairo";
+                b2.innerHTML = "Jhoana";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function part8()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "Bob has many friends but is are unhappy.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Back to Start";
+                b2.innerHTML = "";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function part9()
+            {
+                pic.src = "images/[3]witch.jpg";
+                ptext1.innerHTML = "Bob chose happiness over money and popularity. Bob and Jhoana live happily ever after.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Back to Start";
+                b2.innerHTML = "";
+                b3.innerHTML = "";
+                b4.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            //state machine
+            function bclick(button)
+            {
+                if(state == "intro")
+                {
+                    if(button == 1)
+                    {
+                        part1();
+                        state = "part1";
+                    }
+                    else if(button == 2)
+                    {
+                        part7();
+                        state = "part7";
+                    }
+                }
+                else if(state == "part7")
+                {
+                    if(button == 1)
+                    {
+                        intro();
+                        state = "intro";
+                    }
+                }
+                else if(state == "part1")
+                {
+                    if(button == 1)
+                    {
+                        part2();
+                        state = "part2";
+                    }
+                    else if(button == 2)
+                    {
+                        part6();
+                        state = "part6";
+                    }
+                }
+                else if(state == "part2")
+                {
+                    if(button == 1)
+                    {
+                        part3();
+                        state = "part3";
+                    }
+                }
+                else if(state == "part3")
+                {
+                    if(button == 1)
+                    {
+                        part10();
+                        state = "part10";
+                    }
+                    else if(button == 2)
+                    {
+                        part4();
+                        state = "part4"
+                    }
+                }
+                else if(state == "part4")
+                {
+                    if(button == 1 || button == 2)
+                    {
+                        part5();
+                        state = "part5";
+                    }
+                }
+                else if(state == "part5")
+                {
+                    if(button == 1)
+                    {
+                        part7();
+                        state = "part7";
+                    }
+                }
+                else if(state == "part6" || state == "part 10")
+                {
+                    if(button == 1)
+                    {
+                        part8();
+                        state = "part8";
+                    }
+                    else if(button == 2)
+                    {
+                        part9();
+                        state = "part9";
+                    }
+                }
+                else if(state == "part8" || state == "part9")
+                {
+                    if(button == 1)
+                    {
+                        intro();
+                        state = "intro";
+                    }
+                }
+                return false;
+            }
+        </script>
  </body>
 </html>
